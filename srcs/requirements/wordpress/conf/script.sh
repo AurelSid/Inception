@@ -20,9 +20,11 @@ mv /var/www/wp-config.php /var/www/wordpress/
 wp core install --allow-root --url=${DOMAIN_NAME} --title=${WORDPRESS_NAME} --admin_user=${WORDPRESS_ROOT_LOGIN} --admin_password=${MYSQL_ROOT_PASSWORD} --admin_email=${WORDPRESS_ROOT_EMAIL}
 wp user create ${MYSQL_USER} ${WORDPRESS_USER_EMAIL} --user_pass=${MYSQL_PASSWORD} --role=author --allow-root
 wp theme install inspiro --activate --allow-root
-wp plugin install redis-cache --activate --allow-root
 wp plugin update --all --allow-root
-wp plugin activate redis-cache --allow-root
+wp option update siteurl "https://asideris.42.fr" --allow-root
+wp option update home "https://asideris.42.fr" --allow-root
+
+
 
 fi
 
