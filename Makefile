@@ -10,11 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-# ARGS
-
-
-# CMD
-
 all:
 	
 		@docker-compose -f srcs/docker-compose.yml up --build -d --no-cache
@@ -31,16 +26,17 @@ clean:
 		@./clean.sh
 
 info:
-		@echo "=============================== IMAGES ==============================="
-		@docker images
 		@echo
-		@echo "============================= CONTAINERS ============================="
-		@docker ps -a
-		@echo
-		@echo "=============== NETWORKS ==============="
+		@echo "---networks---"
 		@docker network ls
 		@echo
-		@echo "====== VOLUMES ======"
+		@echo "---mounted images---"
+		@docker images
+		@echo
+		@echo "--containers---"
+		@docker ps -a
+		@echo
+		@echo "---Volumes---"
 		@docker volume ls
 
 .PHONY:	all up down clean info

@@ -3,30 +3,18 @@
  * @link https://wordpress.org/support/article/editing-wp-config-php/
  */
 
-/** The name of the database for WordPress */
-define('DB_NAME', 'Base');
+define('DB_NAME', 'AsiderisDB');
 
-/** MySQL database username */
 define('DB_USER', 'asideris');
 
-/** MySQL database password */
 define('DB_PASSWORD', '1312');
 
-/** MySQL hostname */
 define('DB_HOST', 'mariadb');
 
-/** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
-/** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-
-
-
-/** Authentication Unique Keys and Salts.
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- */
 
 define('AUTH_KEY',         'V@$km&>kwZz18GkpCo&eCQk~,=FFm;0{CE/[ukfvuYy|]n|5*lGZ$^ =?00|3e_^');
 define('SECURE_AUTH_KEY',  'JjId5z>6+!e )=DTtp7w=%;/br&|3iM0ijIy(wh&}S=73+L9d`]&Z5_v2X7>Rz+H');
@@ -37,17 +25,13 @@ define('SECURE_AUTH_SALT', '}7bPt~Gc9g|O-ymwoM4YSK`> 8G/A9%R?QJN~1aHfIM(4$]Lc270
 define('LOGGED_IN_SALT',   'U{2JJ3oKXyfYV~4&RPl/Y<yl9`.qeCup!RR~dq2{w!+yhKBMM7&slO~m>;++,^L}');
 define('NONCE_SALT',       'nA]$N<ci$+yEFDW`0=.8X%&?s!Hg )M$lEEbx)U&J$<vmR}*lSAK%$zCj_sGV#!#');
 
-/** WordPress Database Table prefix. */
 $table_prefix = 'wp_';
 
-/** For developers: WordPress debugging mode. */
 define( 'WP_DEBUG', false );
 
-/** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
 
-/** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
 ?>
