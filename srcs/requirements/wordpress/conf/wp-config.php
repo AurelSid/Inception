@@ -7,7 +7,7 @@ define('DB_NAME', 'AsiderisDB');
 
 define('DB_USER', 'asideris');
 
-define('DB_PASSWORD', '1312');
+define('DB_PASSWORD', 'hello');
 
 define('DB_HOST', 'mariadb');
 
