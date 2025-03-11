@@ -1,6 +1,6 @@
 #!/bin/bash
-rm -rf /home/roko/data/wordpress_data/* 
-rm -rf /home/roko/data/mariadb_data/*
+rm -rf /home/roko/wordpress_data/* 
+rm -rf /home/roko/mariadb_data/*
 docker rmi -f $(docker images -aq) && make down && docker volume rm -f $(docker volume ls -q)#!/bin/bash
 
 docker-compose -f srcs/docker-compose.yml down
